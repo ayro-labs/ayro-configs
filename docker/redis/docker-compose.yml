@@ -1,0 +1,11 @@
+version: "3"
+services:
+  redis:
+    image: redis
+    container_name: redis
+    volumes:
+      - "/opt/applications/chatz-configs/redis/default.conf:/usr/local/etc/redis/redis.conf"
+      - "/opt/data/redis:/data"
+    ports:
+      - "6379:6379"
+    command: redis-server /usr/local/etc/redis/redis.conf
