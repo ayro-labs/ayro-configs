@@ -1,7 +1,7 @@
 module.exports = {
   apps : [
     {
-      name: "Core",
+      name: "Backend",
       script: "/opt/applications/chatz/app.js",
       max_memory_restart : "200M",
     },
