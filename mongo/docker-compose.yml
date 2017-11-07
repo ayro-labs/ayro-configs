@@ -7,4 +7,4 @@ services:
       - "/opt/data/mongo:/data/db"
     ports:
       - "27017:27017"
-    command: mongod --auth
+    command: mongod --config /opt/applications/chatz-configs/mongo/mongod.conf
