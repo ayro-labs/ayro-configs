@@ -6,7 +6,7 @@ if [[ -z "${APPS_HOME}" ]]; then
 fi
 
 echo "Renewing certificates"
-sudo $APPS_HOME/letsencrypt/letsencrypt-auto renew
+sudo $APPS_HOME/letsencrypt/letsencrypt-auto renew > $APPS_HOME/logs/certs-renew.log
 
 echo "Reloading nginx"
 sudo docker exec nginx nginx -s reload
