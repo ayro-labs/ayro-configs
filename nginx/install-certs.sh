@@ -5,14 +5,14 @@ if [[ -z "${APPS_HOME}" ]]; then
   exit 1
 fi
 
-echo "Installing chatz.io certificate"
-sudo $APPS_HOME/letsencrypt/letsencrypt-auto certonly -d chatz.io --standalone --cert-path $APPS_HOME/chatz-configs/nginx/chatz.io/cert.pem --key-path $APPS_HOME/chatz-configs/nginx/chatz.io/privkey.pem --chain-path $APPS_HOME/chatz-configs/nginx/chatz.io/chain.pem --fullchain-path $APPS_HOME/chatz-configs/nginx/chatz.io/fullchain.pem
+echo "Installing ayro.io certificate"
+sudo $APPS_HOME/letsencrypt/letsencrypt-auto certonly -d ayro.io --standalone --cert-path $APPS_HOME/ayro-configs/nginx/ayro.io/cert.pem --key-path $APPS_HOME/ayro-configs/nginx/ayro.io/privkey.pem --chain-path $APPS_HOME/ayro-configs/nginx/ayro.io/chain.pem --fullchain-path $APPS_HOME/ayro-configs/nginx/ayro.io/fullchain.pem
 
-echo "Installing api.chatz.io certificate"
-sudo $APPS_HOME/letsencrypt/letsencrypt-auto certonly -d api.chatz.io --standalone --cert-path $APPS_HOME/chatz-configs/nginx/api.chatz.io/cert.pem --key-path $APPS_HOME/chatz-configs/nginx/api.chatz.io/privkey.pem --chain-path $APPS_HOME/chatz-configs/nginx/api.chatz.io/chain.pem --fullchain-path $APPS_HOME/chatz-configs/nginx/api.chatz.io/fullchain.pem
+echo "Installing api.ayro.io certificate"
+sudo $APPS_HOME/letsencrypt/letsencrypt-auto certonly -d api.ayro.io --standalone --cert-path $APPS_HOME/ayro-configs/nginx/api.ayro.io/cert.pem --key-path $APPS_HOME/ayro-configs/nginx/api.ayro.io/privkey.pem --chain-path $APPS_HOME/ayro-configs/nginx/api.ayro.io/chain.pem --fullchain-path $APPS_HOME/ayro-configs/nginx/api.ayro.io/fullchain.pem
 
-echo "Installing www.chatz.io certificate"
-sudo $APPS_HOME/letsencrypt/letsencrypt-auto certonly -d www.chatz.io --standalone --cert-path $APPS_HOME/chatz-configs/nginx/www.chatz.io/cert.pem --key-path $APPS_HOME/chatz-configs/nginx/www.chatz.io/privkey.pem --chain-path $APPS_HOME/chatz-configs/nginx/www.chatz.io/chain.pem --fullchain-path $APPS_HOME/chatz-configs/nginx/www.chatz.io/fullchain.pem
+echo "Installing www.ayro.io certificate"
+sudo $APPS_HOME/letsencrypt/letsencrypt-auto certonly -d www.ayro.io --standalone --cert-path $APPS_HOME/ayro-configs/nginx/www.ayro.io/cert.pem --key-path $APPS_HOME/ayro-configs/nginx/www.ayro.io/privkey.pem --chain-path $APPS_HOME/ayro-configs/nginx/www.ayro.io/chain.pem --fullchain-path $APPS_HOME/ayro-configs/nginx/www.ayro.io/fullchain.pem
 
 echo "Certificates installed with success"
 exit 0

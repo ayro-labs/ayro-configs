@@ -4,8 +4,8 @@ services:
     image: "mongo"
     container_name: "mongo"
     volumes:
-      - "/opt/applications/chatz-configs/mongo/mongod.conf:/opt/applications/chatz-configs/mongo/mongod.conf"
+      - "/opt/applications/ayro-configs/mongo/mongod.conf:/opt/applications/ayro-configs/mongo/mongod.conf"
       - "/opt/data/mongo:/data/db"
     ports:
       - "27017:27017"
-    command: "mongod --config /opt/applications/chatz-configs/mongo/mongod.conf"
+    command: "mongod --config /opt/applications/ayro-configs/mongo/mongod.conf"
