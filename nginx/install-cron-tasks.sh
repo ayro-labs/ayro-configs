@@ -1,11 +1,6 @@
 #!/bin/bash
 
-if [[ -z "${APPS_HOME}" ]]; then
-  echo "Environment variable APPS_HOME is required"
-  exit 1
-fi
-
-CRON_RENEW_CMD="$APPS_HOME/ayro-configs/nginx/renew-certs.sh"
+CRON_RENEW_CMD="/opt/applications/ayro-configs/nginx/renew-certs.sh"
 CRON_RENEW_JOB="0 0 * * * $CRON_RENEW_CMD"
 
 echo "Removing old nginx cron tasks"
