@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: "WebCM",
-      script: "/opt/applications/ayro/processes/webcm.js",
+      script: "/opt/applications/ayro-webcm/app.js",
       max_memory_restart : "500M",
     },
   ],
