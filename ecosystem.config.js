@@ -6,13 +6,13 @@ module.exports = {
       max_memory_restart : "500M",
     },
     {
-      name: "Website",
-      script: "/opt/applications/ayro-website/server/app.js",
+      name: "Webcm",
+      script: "/opt/applications/ayro-webcm/app.js",
       max_memory_restart : "500M",
     },
     {
-      name: "WebCM",
-      script: "/opt/applications/ayro-webcm/app.js",
+      name: "Website",
+      script: "/opt/applications/ayro-website/server/app.js",
       max_memory_restart : "500M",
     },
   ],
