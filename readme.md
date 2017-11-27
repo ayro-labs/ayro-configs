@@ -3,16 +3,24 @@
 ### Installation ###
 
 Docker
+
 https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 
 Docker Compose
+
 https://docs.docker.com/compose/install/#install-compose
 
-Install Containers
+Installing Containers
 ````
 sudo docker pull nginx
 sudo docker pull redis
 sudo docker pull mongo
+````
+Running Containers
+````
+cd nginx; sudo docker-compose up -d
+cd redis; sudo docker-compose up -d
+cd mongo; sudo docker-compose up -d
 ````
 
 ### Utilities ###
