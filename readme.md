@@ -18,10 +18,16 @@ sudo docker pull mongo
 ````
 
 Running Containers
+
+First you need to create the Ayro network in docker:
 ````
-cd ayro-configs/nginx; sudo docker-compose up -d;
-cd ayro-configs/redis; sudo docker-compose up -d;
-cd ayro-configs/mongo; sudo docker-compose up -d;
+network/create-network.sh
+````
+And then you can run the containers:
+````
+cd nginx; sudo docker-compose up -d;
+cd redis; sudo docker-compose up -d;
+cd mongo; sudo docker-compose up -d;
 ````
 
 ## Nginx Container ##
@@ -30,12 +36,12 @@ cd ayro-configs/mongo; sudo docker-compose up -d;
 
 Installing certificates
 ````
-ayro-configs/nginx/install-certs.sh
+nginx/install-certs.sh
 ````
 
 Renewing certificates (cron task)
 ````
-ayro-configs/nginx/install-renew-task.sh
+nginx/install-renew-task.sh
 ````
 
 ## Redis Container ##

@@ -1,0 +1,18 @@
+version: "3"
+services:
+  ayro:
+    image: "ayro"
+    container_name: "ayro"
+    hostname: "ayro"
+    volumes:
+      - "/opt/applications/ayro/config.properties:/usr/src/ayro/config.properties"
+    ports:
+      - "3000:3000"
+    networks:
+      default:
+        aliases:
+          - "ayro"
+networks:
+  default:
+    external:
+      name: "ayro-network"

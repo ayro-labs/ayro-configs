@@ -3,9 +3,18 @@ services:
   redis:
     image: "redis"
     container_name: "redis"
+    hostname: "ayro-redis"
     volumes:
       - "/opt/applications/ayro-configs/redis/default.conf:/usr/local/etc/redis/redis.conf"
       - "/opt/data/redis:/data"
     ports:
       - "6379:6379"
     command: "redis-server /usr/local/etc/redis/redis.conf"
+    networks:
+      default:
+        aliases:
+          - "ayro-redis"
+networks:
+  default:
+    external:
+      name: "ayro-network"

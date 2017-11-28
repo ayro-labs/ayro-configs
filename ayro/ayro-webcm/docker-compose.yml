@@ -1,0 +1,19 @@
+version: "3"
+services:
+  ayro-webcm:
+    image: "ayro-webcm"
+    container_name: "ayro-webcm"
+    hostname: "ayro-webcm"
+    volumes:
+      - "/opt/applications/ayro-webcm/config.properties:/usr/src/ayro-webcm/config.properties"
+    ports:
+      - "3100:3100"
+      - "3102:3102"
+    networks:
+      default:
+        aliases:
+          - "ayro-webcm"
+networks:
+  default:
+    external:
+      name: "ayro-network"
