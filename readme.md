@@ -19,7 +19,7 @@ sudo docker pull mongo
 
 Running Containers
 
-First you need to create the Ayro network in docker:
+First you need to create the Ayro network on Docker:
 ````
 network/create-network.sh
 ````
