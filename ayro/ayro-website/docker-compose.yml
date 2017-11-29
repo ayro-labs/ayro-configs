@@ -1,7 +1,7 @@
 version: "3"
 services:
   ayro-website:
-    image: "ayro-website"
+    image: "ayro/ayro-website"
     container_name: "ayro-website"
     hostname: "ayro-website"
     volumes:
