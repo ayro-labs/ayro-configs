@@ -81,6 +81,8 @@ sudo docker run --rm -it --net=host mongo mongo shell
 ### Security ###
 
 #### Creating administrator and user ####
+
+Don't forget to replace the password token by the user password.
 ````
 use admin
 db.createUser({
