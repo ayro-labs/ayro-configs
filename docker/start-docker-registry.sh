@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Starting Docker registry..."
+printf "Starting Docker registry..."
 
-docker run -d \
+sudo docker run -d \
   --name registry \
   -v $AYRO_HOME/ayro-configs/certificate:/certs \
   -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
@@ -11,4 +11,4 @@ docker run -d \
   -p 7000:443 \
   registry
 
-echo "Docker registry was started with success!"
+printf "Docker registry was started with success!"
