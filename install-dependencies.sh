@@ -7,21 +7,11 @@ if [[ -z "${AYRO_HOME}" ]]; then
   exit 1
 fi
 
-echo "Creating base directories..."
-mkdir $AYRO_HOME/data
-mkdir $AYRO_HOME/logs
+echo "Installing dependencies..."
 printf "\n\n\n"
 sleep 5
 
 $AYRO_HOME/ayro-configs/certificate/install-letsencrypt.sh
-printf "\n\n\n"
-sleep 5
-
-$AYRO_HOME/ayro-configs/certificate/install-certs.sh
-printf "\n\n\n"
-sleep 5
-
-$AYRO_HOME/ayro-configs/certificate/install-certs-tasks.sh
 printf "\n\n\n"
 sleep 5
 
@@ -30,7 +20,6 @@ printf "\n\n\n"
 sleep 5
 
 $AYRO_HOME/ayro-configs/docker/install-docker-compose.sh
-printf "\n\n\n"
-sleep 5
 
-$AYRO_HOME/ayro-configs/docker/create-network.sh
+echo "Dependencies installed with success!"
+echo "Please log out and log back in with user $USER."

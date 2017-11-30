@@ -15,12 +15,12 @@ docker/install-docker-compose.sh
 
 ### Installing Containers ###
 ````
-sudo docker pull nginx
-sudo docker pull redis
-sudo docker pull mongo
-sudo docker pull ayro/ayro
-sudo docker pull ayro/ayro-webcm
-sudo docker pull ayro/ayro-website
+docker pull nginx
+docker pull redis
+docker pull mongo
+docker pull ayro/ayro
+docker pull ayro/ayro-webcm
+docker pull ayro/ayro-website
 ````
 
 ### Running Containers ###
@@ -67,7 +67,7 @@ certificate/install-certs-tasks.sh
 ### Client ###
 
 ````
-sudo docker run --rm -it --net=host redis redis-cli
+docker run --rm -it --net=host redis redis-cli
 ````
 
 ## Mongo Container ##
@@ -75,7 +75,7 @@ sudo docker run --rm -it --net=host redis redis-cli
 ### Shell ###
 
 ````
-sudo docker run --rm -it --net=host mongo mongo shell
+docker run --rm -it --net=host mongo mongo shell
 ````
 
 ### Security ###
