@@ -1,0 +1,23 @@
+version: "3"
+services:
+  registry:
+    image: "registry"
+    container_name: "registry"
+    hostname: "ayro-registry"
+    volumes:
+      - "<AYRO_HOME>/ayro-configs/certificate:/certs"
+      - "/var/lib/registry:/var/lib/registry"
+    ports:
+      - "7000:443"
+    environment:
+      REGISTRY_HTTP_ADDR: "0.0.0.0:443"
+      REGISTRY_HTTP_TLS_CERTIFICATE: "/certs/docker.ayro.io/fullchain.pem"
+      REGISTRY_HTTP_TLS_KEY: "/certs/docker.ayro.io/privkey.pem"
+    networks:
+      default:
+        aliases:
+          - "ayro-registry"
+networks:
+  default:
+    external:
+      name: "ayro-network"
