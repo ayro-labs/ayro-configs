@@ -5,7 +5,7 @@ services:
     container_name: "ayro-webcm"
     hostname: "ayro-webcm"
     volumes:
-      - "/opt/configs/ayro-webcm.properties:/usr/src/ayro-webcm/config.properties"
+      - "${AYRO_HOME}/ayro-configs/ayro/ayro-webcm/config.properties:/usr/src/ayro-webcm/config.properties"
     ports:
       - "3100:3100"
       - "3102:3102"

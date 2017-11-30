@@ -2,7 +2,7 @@
 
 echo "Creating Ayro network on Docker..."
 
-sudo docker network create \
+docker network create \
   --driver bridge \
   --subnet 172.28.0.0/16 \
   --ip-range 172.28.5.0/24 \
@@ -10,4 +10,3 @@ sudo docker network create \
   ayro-network
 
 echo "Ayro network was created with success!"
-exit 0

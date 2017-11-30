@@ -1,16 +1,18 @@
-## Docker Basics ##
+## Docker ##
 
-### Installation ###
+### Installing docker ###
+
+Just check the instructions blow in other install Docker and Docker Compose:
 
 Docker
 
-https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+https://docs.docker.com/engine/installation/linux/docker-ce
 
 Docker Compose
 
 https://docs.docker.com/compose/install/#install-compose
 
-Installing Containers
+### Installing Containers ###
 ````
 sudo docker pull nginx
 sudo docker pull redis
@@ -20,11 +22,11 @@ sudo docker pull ayro/ayro-webcm
 sudo docker pull ayro/ayro-website
 ````
 
-Running Containers
+### Running Containers ###
 
 First you need to create the Ayro network on Docker:
 ````
-network/create-network.sh
+docker/create-network.sh
 ````
 And then you can run the containers:
 ````
@@ -44,19 +46,19 @@ cd ayro/ayro-website; sudo docker-compose up -d
 
 ### Certificates ###
 
-Installing Let's Encrypt
+#### Installing Let's Encrypt ####
 ````
-nginx/install-letsencrypt.sh
-````
-
-Installing certificates
-````
-nginx/install-certs.sh
+certificate/install-letsencrypt.sh
 ````
 
-Renewing certificates (cron task)
+#### Installing certificates ####
 ````
-nginx/install-renew-task.sh
+certificate/install-certs.sh
+````
+
+#### Renewing certificates (cron task) ####
+````
+certificate/install-certs-tasks.sh
 ````
 
 ## Redis Container ##
@@ -77,7 +79,7 @@ sudo docker run --rm -it --net=host mongo mongo shell
 
 ### Security ###
 
-Creating administrator and user
+#### Creating administrator and user ####
 ````
 use admin
 db.createUser({

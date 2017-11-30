@@ -9,4 +9,3 @@ sudo apt-get update
 sudo apt-get install certbot
 
 echo "Let's Encrypt was installed with success!"
-exit 0
