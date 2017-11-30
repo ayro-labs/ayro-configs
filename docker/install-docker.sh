@@ -14,4 +14,4 @@ sudo apt-get install docker-ce
 sudo groupadd docker || true
 sudo usermod -aG docker $USER
 
-echo "Docker installed with success!
+echo "Docker installed with success!"

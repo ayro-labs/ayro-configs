@@ -8,15 +8,15 @@ if [[ -z "${AYRO_HOME}" ]]; then
 fi
 
 echo "Installing dependencies..."
-printf "\n\n\n"
+printf "\n\n"
 sleep 5
 
 $AYRO_HOME/ayro-configs/certificate/install-letsencrypt.sh
-printf "\n\n\n"
+printf "\n\n"
 sleep 5
 
 $AYRO_HOME/ayro-configs/docker/install-docker.sh
-printf "\n\n\n"
+printf "\n\n"
 sleep 5
 
 $AYRO_HOME/ayro-configs/docker/install-docker-compose.sh
