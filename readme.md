@@ -2,15 +2,16 @@
 
 ### Installing docker ###
 
-Just check the instructions blow in other install Docker and Docker Compose:
+Just check the instructions below in other install Docker and Docker Compose:
 
-Docker
+Docker: https://docs.docker.com/engine/installation/linux/docker-ce
+Docker Compose: https://docs.docker.com/compose/install/#install-compose
 
-https://docs.docker.com/engine/installation/linux/docker-ce
-
-Docker Compose
-
-https://docs.docker.com/compose/install/#install-compose
+You can also try to install Docker and Docker Compose executing the following scripts:
+````
+docker/install-docker.sh
+docker/install-docker-compose.sh
+````
 
 ### Installing Containers ###
 ````
