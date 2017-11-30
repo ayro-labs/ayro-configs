@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Installing Let's Encrypt..."
 
 sudo apt-get update

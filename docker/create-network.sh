@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Creating Ayro network on Docker..."
 
 sudo docker network create \

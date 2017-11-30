@@ -32,15 +32,15 @@ docker/create-network.sh
 And then you can run the containers:
 ````
 // Please read "Nginx Container" session before
-cd nginx; sudo docker-compose up -d
+docker/start-container.sh nginx
 // Please read "Redis Container" session before
-cd redis; sudo docker-compose up -d
+docker/start-container.sh redis
 // Please read "Mongo Container" session before
-cd mongo; sudo docker-compose up -d
+docker/start-container.sh mongo
 // Running ayro containers
-cd ayro/ayro; sudo docker-compose up -d
-cd ayro/ayro-webcm; sudo docker-compose up -d
-cd ayro/ayro-website; sudo docker-compose up -d
+docker/start-container.sh ayro/ayro
+docker/start-container.sh ayro/ayro-webcm
+docker/start-container.sh ayro/ayro-website
 ````
 
 ## Nginx Container ##

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Starting Docker registry..."
 
 sudo docker run -d \
