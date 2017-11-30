@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Starting Docker registry..."
+echo "Starting Docker registry..."
 
 sudo docker run -d \
   --name registry \
@@ -11,4 +11,4 @@ sudo docker run -d \
   -p 7000:443 \
   registry
 
-printf "Docker registry was started with success!"
+echo "Docker registry was started with success!"

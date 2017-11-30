@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [[ -z "${AYRO_HOME}" ]]; then
-  printf "Enrivonment variable with name AYRO_HOME is required"
+  echo "Enrivonment variable with name AYRO_HOME is required"
   exit 1
 fi
 
-printf "Creating base directories..."
+echo "Creating base directories..."
 sudo mkdir $AYRO_HOME/data
 sudo mkdir $AYRO_HOME/logs
 printf "\n\n\n"

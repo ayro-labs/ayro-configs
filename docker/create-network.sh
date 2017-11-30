@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Creating Ayro network on Docker..."
+echo "Creating Ayro network on Docker..."
 
 sudo docker network create \
   --driver bridge \
@@ -9,4 +9,4 @@ sudo docker network create \
   --gateway 172.28.5.254 \
   ayro-network
 
-printf "Ayro network was created with success!"
+echo "Ayro network was created with success!"

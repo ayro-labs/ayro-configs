@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Installing Docker..."
+echo "Installing Docker..."
 
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
@@ -9,4 +9,4 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install docker-ce
 
-printf "Docker installed with success!
+echo "Docker installed with success!
