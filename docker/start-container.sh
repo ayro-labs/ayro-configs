@@ -14,7 +14,11 @@ if [[ -z ""$AYRO_HOME"" ]]; then
   exit 1
 fi
 
+echo "Starting container $1..."
+
 cd $AYRO_HOME/ayro-configs/docker/$1
 sed -i "s|<AYRO_HOME>|$AYRO_HOME|g" docker-compose.yml
 sudo docker-compose up -d
 sed -i "s|$AYRO_HOME|<AYRO_HOME>|g" docker-compose.yml
+
+echo "Container $1 was started with success!"

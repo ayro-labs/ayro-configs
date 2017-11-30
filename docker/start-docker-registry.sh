@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Starting Docker registry..."
+echo "Starting Docker Registry..."
 
 sudo docker run -d \
   --name registry \
@@ -13,4 +13,4 @@ sudo docker run -d \
   -p 7000:443 \
   registry
 
-echo "Docker registry was started with success!"
+echo "Docker Registry was started with success!"
