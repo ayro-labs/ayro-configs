@@ -67,7 +67,7 @@ certificate/install-certs-tasks.sh
 ### Client ###
 
 ````
-sudo docker run --rm -it --net=host redis redis-cli -p 6379
+sudo docker run --rm -it --net=host redis redis-cli
 ````
 
 ## Mongo Container ##

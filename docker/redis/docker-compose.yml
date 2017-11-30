@@ -5,7 +5,7 @@ services:
     container_name: "redis"
     hostname: "ayro-redis"
     volumes:
-      - "<AYRO_HOME>/ayro-configs/redis/default.conf:/usr/local/etc/redis/redis.conf"
+      - "<AYRO_HOME>/ayro-configs/docker/redis/default.conf:/usr/local/etc/redis/redis.conf"
       - "<AYRO_HOME>/data/redis:/data"
     ports:
       - "6379:6379"
