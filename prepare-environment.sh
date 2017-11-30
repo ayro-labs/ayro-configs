@@ -8,8 +8,8 @@ if [[ -z "${AYRO_HOME}" ]]; then
 fi
 
 echo "Creating base directories..."
-mkdir $AYRO_HOME/data
-mkdir $AYRO_HOME/logs
+mkdir -p $AYRO_HOME/data
+mkdir -p $AYRO_HOME/logs
 printf "\n\n\n"
 sleep 5
 
