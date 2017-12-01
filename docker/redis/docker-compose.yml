@@ -7,8 +7,6 @@ services:
     volumes:
       - "${AYRO_HOME}/ayro-configs/docker/redis/default.conf:/usr/local/etc/redis/redis.conf"
       - "${AYRO_HOME}/data/redis:/data"
-    ports:
-      - "6379:6379"
     command: "redis-server /usr/local/etc/redis/redis.conf"
     networks:
       default:

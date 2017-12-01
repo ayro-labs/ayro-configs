@@ -7,8 +7,6 @@ services:
     volumes:
       - "${AYRO_HOME}/ayro-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
       - "${AYRO_HOME}/data/mongo:/data/db"
-    ports:
-      - "27017:27017"
     command: "mongod --config /usr/local/etc/mongo/mongod.conf"
     networks:
       default:
