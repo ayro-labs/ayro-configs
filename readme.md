@@ -58,7 +58,7 @@ docker/start-container.sh nginx
 ### Shell ###
 
 ````
-docker run --rm -it --net=host mongo mongo shell
+docker run --rm -it --net=ayro-network mongo mongo --host mongo
 ````
 
 ### Security ###
@@ -91,7 +91,7 @@ db.createUser({
 ### Client ###
 
 ````
-docker run --rm -it --net=host redis redis-cli
+docker run --rm -it --net=ayro-network redis redis-cli -h redis
 ````
 
 ## Nginx Container ##
