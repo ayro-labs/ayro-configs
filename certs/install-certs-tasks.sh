@@ -9,7 +9,7 @@ fi
 
 echo "Installing certificate cron tasks..."
 
-CRON_RENEW_CMD="$AYRO_HOME/ayro-configs/certificate/renew-certs.sh"
+CRON_RENEW_CMD="$AYRO_HOME/ayro-configs/certs/renew-certs.sh"
 CRON_RENEW_JOB="0 0 * * * $CRON_RENEW_CMD"
 
 (crontab -l | grep -v -F "$CRON_RENEW_CMD") | crontab -

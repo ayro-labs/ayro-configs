@@ -100,15 +100,15 @@ docker run --rm -it --net=host redis redis-cli
 
 #### Installing Let's Encrypt ####
 ````
-certificate/install-letsencrypt.sh
+certs/install-letsencrypt.sh
 ````
 
 #### Installing certificates ####
 ````
-certificate/install-certs.sh
+certs/install-certs.sh
 ````
 
 #### Renewing certificates (cron task) ####
 ````
-certificate/install-certs-tasks.sh
+certs/install-certs-tasks.sh
 ````

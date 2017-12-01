@@ -18,11 +18,11 @@ mkdir -p $AYRO_HOME/logs
 printf "\n\n"
 sleep 5
 
-$AYRO_HOME/ayro-configs/certificate/install-certs.sh
+$AYRO_HOME/ayro-configs/certs/install-certs.sh
 printf "\n\n"
 sleep 5
 
-$AYRO_HOME/ayro-configs/certificate/install-certs-tasks.sh
+$AYRO_HOME/ayro-configs/certs/install-certs-tasks.sh
 printf "\n\n"
 sleep 5
 

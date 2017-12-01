@@ -7,7 +7,7 @@ if [[ -z "${AYRO_HOME}" ]]; then
   exit 1
 fi
 
-echo "Renewing certificates..."
+echo "Renewing cerfiticates..."
 sudo certbot renew > $AYRO_HOME/logs/certs-renew.log
 
 echo "Reloading nginx..."

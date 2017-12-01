@@ -5,7 +5,7 @@ services:
     container_name: "registry"
     hostname: "ayro-registry"
     volumes:
-      - "${AYRO_HOME}/ayro-configs/certificate:/certs"
+      - "${AYRO_HOME}/ayro-configs/certs:/certs"
       - "${AYRO_HOME}/auth:/auth"
       - "/var/lib/registry:/var/lib/registry"
     ports:
