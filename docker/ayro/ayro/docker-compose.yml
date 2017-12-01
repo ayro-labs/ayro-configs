@@ -5,9 +5,7 @@ services:
     container_name: "ayro"
     hostname: "ayro"
     volumes:
-      - "${AYRO_HOME}/ayro-configs/docker/ayro/ayro/config.properties:/usr/src/ayro/config.properties"
-    ports:
-      - "3000:3000"
+      - "${AYRO_HOME}/configs/ayro.properties:/usr/src/ayro/config.properties"
     networks:
       default:
         ipv4_address: "172.28.5.1"

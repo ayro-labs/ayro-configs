@@ -5,9 +5,7 @@ services:
     container_name: "ayro-website"
     hostname: "ayro-website"
     volumes:
-      - "${AYRO_HOME}/ayro-configs/docker/ayro/ayro-website/config.properties:/usr/src/ayro-website/server/config.properties"
-    ports:
-      - "4000:4000"
+      - "${AYRO_HOME}/configs/ayro-website.properties:/usr/src/ayro-website/server/config.properties"
     networks:
       default:
         ipv4_address: "172.28.5.3"

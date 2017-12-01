@@ -5,10 +5,7 @@ services:
     container_name: "ayro-webcm"
     hostname: "ayro-webcm"
     volumes:
-      - "${AYRO_HOME}/ayro-configs/docker/ayro/ayro-webcm/config.properties:/usr/src/ayro-webcm/config.properties"
-    ports:
-      - "3100:3100"
-      - "3102:3102"
+      - "${AYRO_HOME}/configs/ayro-webcm.properties:/usr/src/ayro-webcm/config.properties"
     networks:
       default:
         ipv4_address: "172.28.5.2"
