@@ -1,21 +1,23 @@
-version: "3"
+version: "3.4"
 services:
   mongo:
     image: "mongo"
     container_name: "mongo"
     hostname: "ayro-mongo"
     volumes:
-      - "<AYRO_HOME>/ayro-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
-      - "<AYRO_HOME>/data/mongo:/data/db"
+      - "${AYRO_HOME}/ayro-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
+      - "${AYRO_HOME}/data/mongo:/data/db"
     ports:
       - "27017:27017"
     command: "mongod --config /usr/local/etc/mongo/mongod.conf"
     networks:
       default:
         ipv4_address: "172.28.5.4"
-        aliases:
-          - "ayro-mongo"
-networks:
-  default:
-    external:
-      name: "ayro-network"
+    extra_hosts:
+      - "ayro:172.28.5.1"
+      - "ayro-webcm:172.28.5.2"
+      - "ayro-website:172.28.5.3"
+      - "ayro-mongo:172.28.5.4"
+      - "ayro-redis:172.28.5.5"
+      - "ayro-nginx:172.28.5.6"
+      - "ayro-registry:172.28.5.7"

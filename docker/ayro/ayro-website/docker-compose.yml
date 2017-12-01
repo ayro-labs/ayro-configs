@@ -1,19 +1,21 @@
-version: "3"
+version: "3.4"
 services:
   ayro-website:
     image: "ayro/ayro-website"
     container_name: "ayro-website"
     hostname: "ayro-website"
     volumes:
-      - "<AYRO_HOME>/ayro-configs/docker/ayro/ayro-website/config.properties:/usr/src/ayro-website/server/config.properties"
+      - "${AYRO_HOME}/ayro-configs/docker/ayro/ayro-website/config.properties:/usr/src/ayro-website/server/config.properties"
     ports:
       - "4000:4000"
     networks:
       default:
         ipv4_address: "172.28.5.3"
-        aliases:
-          - "ayro-website"
-networks:
-  default:
-    external:
-      name: "ayro-network"
+    extra_hosts:
+      - "ayro:172.28.5.1"
+      - "ayro-webcm:172.28.5.2"
+      - "ayro-website:172.28.5.3"
+      - "ayro-mongo:172.28.5.4"
+      - "ayro-redis:172.28.5.5"
+      - "ayro-nginx:172.28.5.6"
+      - "ayro-registry:172.28.5.7"

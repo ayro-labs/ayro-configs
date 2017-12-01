@@ -1,20 +1,22 @@
-version: "3"
+version: "3.4"
 services:
   ayro-webcm:
     image: "ayro/ayro-webcm"
     container_name: "ayro-webcm"
     hostname: "ayro-webcm"
     volumes:
-      - "<AYRO_HOME>/ayro-configs/docker/ayro/ayro-webcm/config.properties:/usr/src/ayro-webcm/config.properties"
+      - "${AYRO_HOME}/ayro-configs/docker/ayro/ayro-webcm/config.properties:/usr/src/ayro-webcm/config.properties"
     ports:
       - "3100:3100"
       - "3102:3102"
     networks:
       default:
         ipv4_address: "172.28.5.2"
-        aliases:
-          - "ayro-webcm"
-networks:
-  default:
-    external:
-      name: "ayro-network"
+    extra_hosts:
+      - "ayro:172.28.5.1"
+      - "ayro-webcm:172.28.5.2"
+      - "ayro-website:172.28.5.3"
+      - "ayro-mongo:172.28.5.4"
+      - "ayro-redis:172.28.5.5"
+      - "ayro-nginx:172.28.5.6"
+      - "ayro-registry:172.28.5.7"

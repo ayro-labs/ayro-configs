@@ -1,12 +1,12 @@
-version: "3"
+version: "3.4"
 services:
   registry:
     image: "registry"
     container_name: "registry"
     hostname: "ayro-registry"
     volumes:
-      - "<AYRO_HOME>/ayro-configs/certificate:/certs"
-      - "<AYRO_HOME>/auth:/auth"
+      - "${AYRO_HOME}/ayro-configs/certificate:/certs"
+      - "${AYRO_HOME}/auth:/auth"
       - "/var/lib/registry:/var/lib/registry"
     ports:
       - "7000:443"
@@ -20,9 +20,11 @@ services:
     networks:
       default:
         ipv4_address: "172.28.5.7"
-        aliases:
-          - "ayro-registry"
-networks:
-  default:
-    external:
-      name: "ayro-network"
+    extra_hosts:
+      - "ayro:172.28.5.1"
+      - "ayro-webcm:172.28.5.2"
+      - "ayro-website:172.28.5.3"
+      - "ayro-mongo:172.28.5.4"
+      - "ayro-redis:172.28.5.5"
+      - "ayro-nginx:172.28.5.6"
+      - "ayro-registry:172.28.5.7"
