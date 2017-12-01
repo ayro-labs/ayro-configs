@@ -6,6 +6,7 @@ services:
     hostname: "ayro-registry"
     volumes:
       - "<AYRO_HOME>/ayro-configs/certificate:/certs"
+      - "<AYRO_HOME>/auth:/auth"
       - "/var/lib/registry:/var/lib/registry"
     ports:
       - "7000:443"
@@ -13,8 +14,12 @@ services:
       REGISTRY_HTTP_ADDR: "0.0.0.0:443"
       REGISTRY_HTTP_TLS_CERTIFICATE: "/certs/docker.ayro.io/fullchain.pem"
       REGISTRY_HTTP_TLS_KEY: "/certs/docker.ayro.io/privkey.pem"
+      REGISTRY_AUTH: "htpasswd"
+      REGISTRY_AUTH_HTPASSWD_PATH: "/auth/registry.password"
+      REGISTRY_AUTH_HTPASSWD_REALM: "Registry Realm"
     networks:
       default:
+        ipv4_address: "172.28.5.7"
         aliases:
           - "ayro-registry"
 networks:

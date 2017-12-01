@@ -11,6 +11,11 @@ echo "Installing dependencies..."
 printf "\n\n"
 sleep 5
 
+echo "Installing htpasswd..."
+sudo apt install apache2-utils
+printf "\n\n"
+sleep 5
+
 $AYRO_HOME/ayro-configs/certificate/install-letsencrypt.sh
 printf "\n\n"
 sleep 5

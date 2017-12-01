@@ -12,6 +12,7 @@ printf "\n\n"
 sleep 5
 
 echo "Creating base directories..."
+mkdir -p $AYRO_HOME/auth
 mkdir -p $AYRO_HOME/data
 mkdir -p $AYRO_HOME/logs
 printf "\n\n"

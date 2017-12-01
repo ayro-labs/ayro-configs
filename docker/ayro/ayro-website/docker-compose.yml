@@ -10,6 +10,7 @@ services:
       - "4000:4000"
     networks:
       default:
+        ipv4_address: "172.28.5.3"
         aliases:
           - "ayro-website"
 networks:

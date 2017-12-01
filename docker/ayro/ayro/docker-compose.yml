@@ -10,6 +10,7 @@ services:
       - "3000:3000"
     networks:
       default:
+        ipv4_address: "172.28.5.1"
         aliases:
           - "ayro"
 networks:
