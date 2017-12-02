@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   ayro-webcm:
-    image: "ayro/ayro-webcm"
+    image: "ayro-webcm"
     container_name: "ayro-webcm"
     hostname: "ayro-webcm"
     volumes:
