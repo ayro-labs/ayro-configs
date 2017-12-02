@@ -35,11 +35,4 @@ sudo certbot certonly -d webcm.ayro.io --standalone \
   --chain-path $AYRO_HOME/ayro-configs/certs/webcm.ayro.io/chain.pem \
   --fullchain-path $AYRO_HOME/ayro-configs/certs/webcm.ayro.io/fullchain.pem
 
-  echo "Installing docker.ayro.io certificate..."
-sudo certbot certonly -d docker.ayro.io --standalone \
-  --cert-path $AYRO_HOME/ayro-configs/certs/docker.ayro.io/cert.pem \
-  --key-path $AYRO_HOME/ayro-configs/certs/docker.ayro.io/privkey.pem \
-  --chain-path $AYRO_HOME/ayro-configs/certs/docker.ayro.io/chain.pem \
-  --fullchain-path $AYRO_HOME/ayro-configs/certs/docker.ayro.io/fullchain.pem
-
 echo "Certificates installed with success!"

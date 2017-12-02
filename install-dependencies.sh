@@ -11,11 +11,6 @@ echo "Installing dependencies..."
 printf "\n\n"
 sleep 5
 
-echo "Installing htpasswd..."
-sudo apt install apache2-utils
-printf "\n\n"
-sleep 5
-
 $AYRO_HOME/ayro-configs/certs/install-letsencrypt.sh
 printf "\n\n"
 sleep 5
@@ -25,6 +20,10 @@ printf "\n\n"
 sleep 5
 
 $AYRO_HOME/ayro-configs/docker/install-docker-compose.sh
+printf "\n\n"
+sleep 5
+
+$AYRO_HOME/ayro-configs/dependencies/install-awscli.sh
 
 echo "Dependencies installed with success!"
 echo "Please log out and log back in with the user $USER."
