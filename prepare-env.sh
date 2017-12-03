@@ -2,8 +2,18 @@
 
 set -e
 
+if [ "$(whoami)" != "ayro" ]; then
+  echo "This script must be executed with the user ayro"
+  exit 1
+fi
+
 if [ -z "$AYRO_HOME" ]; then
   echo "Enrivonment variable with name AYRO_HOME is required"
+  exit 1
+fi
+
+if [ ! -d "$AYRO_HOME/apps/ayro-configs" ]; then
+  echo "The project ayro-configs must be located in $AYRO_HOME/apps"
   exit 1
 fi
 
