@@ -2,7 +2,7 @@ version: "3.4"
 services:
   ayro-website:
     << : *common
-    image: "ayro/ayro-website"
+    image: "554511234717.dkr.ecr.us-west-1.amazonaws.com/ayro/ayro-website"
     container_name: "ayro-website"
     hostname: "ayro-website"
     volumes:
