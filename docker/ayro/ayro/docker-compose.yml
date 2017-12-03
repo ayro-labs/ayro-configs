@@ -6,6 +6,7 @@ services:
     hostname: "ayro"
     volumes:
       - "${AYRO_HOME}/configs/ayro.properties:/usr/src/ayro/config.properties"
+      - "${AYRO_HOME}/public:/usr/src/ayro/public"
     networks:
       default:
         ipv4_address: "172.28.5.1"

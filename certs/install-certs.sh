@@ -2,7 +2,7 @@
 
 set -e
 
-if [[ -z "${AYRO_HOME}" ]]; then
+if [ -z "$AYRO_HOME" ]; then
   echo "Enrivonment variable with name AYRO_HOME is required"
   exit 1
 fi
