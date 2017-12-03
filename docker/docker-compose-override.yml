@@ -1,4 +1,13 @@
 version: "3.4"
+x-common:
+  &common
+    extra_hosts:
+      - "ayro:172.28.5.1"
+      - "ayro-webcm:172.28.5.2"
+      - "ayro-website:172.28.5.3"
+      - "ayro-nginx:172.28.5.10"
+      - "ayro-mongo:172.28.5.11"
+      - "ayro-redis:172.28.5.12"
 networks:
   default:
     external:

@@ -1,20 +1,14 @@
 version: "3.4"
 services:
   redis:
+    << : *common
     image: "redis"
     container_name: "redis"
     hostname: "ayro-redis"
     volumes:
-      - "${AYRO_HOME}/ayro-configs/docker/redis/default.conf:/usr/local/etc/redis/redis.conf"
+      - "${AYRO_HOME}/apps/ayro-configs/docker/redis/default.conf:/usr/local/etc/redis/redis.conf"
       - "${AYRO_HOME}/data/redis:/data"
     command: "redis-server /usr/local/etc/redis/redis.conf"
     networks:
       default:
         ipv4_address: "172.28.5.12"
-    extra_hosts:
-      - "ayro:${DOCKER_HOST}"
-      - "ayro-webcm:${DOCKER_HOST}"
-      - "ayro-website:${DOCKER_HOST}"
-      - "ayro-nginx:172.28.5.10"
-      - "ayro-mongo:172.28.5.11"
-      - "ayro-redis:172.28.5.12"

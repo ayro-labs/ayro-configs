@@ -1,20 +1,14 @@
 version: "3.4"
 services:
   mongo:
+    << : *common
     image: "mongo"
     container_name: "mongo"
     hostname: "ayro-mongo"
     volumes:
-      - "${AYRO_HOME}/ayro-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
+      - "${AYRO_HOME}/apps/ayro-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
       - "${AYRO_HOME}/data/mongo:/data/db"
     command: "mongod --config /usr/local/etc/mongo/mongod.conf"
     networks:
       default:
         ipv4_address: "172.28.5.11"
-    extra_hosts:
-      - "ayro:${DOCKER_HOST}"
-      - "ayro-webcm:${DOCKER_HOST}"
-      - "ayro-website:${DOCKER_HOST}"
-      - "ayro-nginx:172.28.5.10"
-      - "ayro-mongo:172.28.5.11"
-      - "ayro-redis:172.28.5.12"

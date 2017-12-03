@@ -1,22 +1,16 @@
 version: "3.4"
 services:
   nginx:
+    << : *common
     image: "nginx"
     container_name: "nginx"
     hostname: "ayro-nginx"
     volumes:
-      - "${AYRO_HOME}/ayro-configs/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"
-      - "${AYRO_HOME}/ayro-configs/certs:/etc/nginx/ssl"
+      - "${AYRO_HOME}/apps/ayro-configs/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+      - "${AYRO_HOME}/apps/ayro-configs/certs:/etc/nginx/ssl"
     ports:
       - "80:80"
       - "443:443"
     networks:
       default:
         ipv4_address: "172.28.5.10"
-    extra_hosts:
-      - "ayro:${DOCKER_HOST}"
-      - "ayro-webcm:${DOCKER_HOST}"
-      - "ayro-website:${DOCKER_HOST}"
-      - "ayro-nginx:172.28.5.10"
-      - "ayro-mongo:172.28.5.11"
-      - "ayro-redis:172.28.5.12"
