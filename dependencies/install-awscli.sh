@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Installing AWS client..."
 
 curl -O https://bootstrap.pypa.io/get-pip.py

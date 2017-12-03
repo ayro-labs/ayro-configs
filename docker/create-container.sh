@@ -16,7 +16,7 @@ fi
 
 echo "Creating container $1..."
 
-cd $AYRO_HOME/ayro-configs/docker/$1
-docker-compose -f docker-compose.yml -f $AYRO_HOME/ayro-configs/docker/docker-compose-override.yml up -d
+cd $AYRO_HOME/apps/ayro-configs/docker/$1
+docker-compose -f docker-compose.yml -f $AYRO_HOME/apps/ayro-configs/docker/docker-compose-override.yml up -d
 
 echo "Container $1 was created with success!"

@@ -13,16 +13,6 @@ docker/install-docker.sh
 docker/install-docker-compose.sh
 ````
 
-### Installing Containers ###
-````
-docker pull nginx
-docker pull mongo
-docker pull redis
-docker pull ayro/ayro
-docker pull ayro/ayro-webcm
-docker pull ayro/ayro-website
-````
-
 ### Running Containers ###
 
 First you need to create the Ayro network on Docker:
@@ -31,26 +21,33 @@ docker/create-network.sh
 ````
 And then you can run the containers:
 ````
-// Please read "Registry Container" session before
-docker/start-container.sh registry
+// Please read "Nginx Container" session before
+docker/start-container.sh nginx
 
 // Please read "Mongo Container" session before
 docker/start-container.sh mongo
 
 // Please read "Redis Container" session before
 docker/start-container.sh redis
+````
 
-// Running ayro container
-docker/start-container.sh ayro/ayro
+## Nginx Container ##
 
-// Running ayro-webcm container
-docker/start-container.sh ayro/ayro-webcm
+### Certificates ###
 
-// Running ayro-website container
-docker/start-container.sh ayro/ayro-website
+#### Installing Let's Encrypt ####
+````
+certs/install-letsencrypt.sh
+````
 
-// Please read "Nginx Container" session before
-docker/start-container.sh nginx
+#### Installing certificates ####
+````
+certs/install-certs.sh
+````
+
+#### Renewing certificates (cron task) ####
+````
+certs/install-certs-tasks.sh
 ````
 
 ## Mongo Container ##
@@ -92,23 +89,4 @@ db.createUser({
 
 ````
 docker run --rm -it --net=ayro-network redis redis-cli -h redis
-````
-
-## Nginx Container ##
-
-### Certificates ###
-
-#### Installing Let's Encrypt ####
-````
-certs/install-letsencrypt.sh
-````
-
-#### Installing certificates ####
-````
-certs/install-certs.sh
-````
-
-#### Renewing certificates (cron task) ####
-````
-certs/install-certs-tasks.sh
 ````

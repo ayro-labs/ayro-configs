@@ -18,14 +18,14 @@ mkdir -p $AYRO_HOME/logs
 printf "\n\n"
 sleep 5
 
-$AYRO_HOME/ayro-configs/certs/install-certs.sh
+$AYRO_HOME/apps/ayro-configs/certs/install-certs.sh
 printf "\n\n"
 sleep 5
 
-$AYRO_HOME/ayro-configs/certs/install-certs-tasks.sh
+$AYRO_HOME/apps/ayro-configs/certs/install-certs-tasks.sh
 printf "\n\n"
 sleep 5
 
-$AYRO_HOME/ayro-configs/docker/create-network.sh
+$AYRO_HOME/apps/ayro-configs/docker/create-network.sh
 
 echo "Enrivonment prepared with success!"
