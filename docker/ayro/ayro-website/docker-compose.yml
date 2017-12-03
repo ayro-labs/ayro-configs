@@ -10,9 +10,9 @@ services:
       default:
         ipv4_address: "172.28.5.3"
     extra_hosts:
-      - "ayro:${DOCKER_HOST}"
-      - "ayro-webcm:${DOCKER_HOST}"
-      - "ayro-website:${DOCKER_HOST}"
+      - "ayro:172.28.5.1"
+      - "ayro-webcm:172.28.5.2"
+      - "ayro-website:172.28.5.3"
       - "ayro-nginx:172.28.5.10"
       - "ayro-mongo:172.28.5.11"
       - "ayro-redis:172.28.5.12"
