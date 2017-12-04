@@ -2,7 +2,7 @@ version: "3.4"
 services:
   mongo:
     << : *common
-    image: "mongo"
+    image: "mongo:3.4.10"
     container_name: "mongo"
     hostname: "ayro-mongo"
     volumes:
