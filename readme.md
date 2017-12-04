@@ -22,13 +22,22 @@ docker/create-network.sh
 And then you can run the containers:
 ````
 // Please read "Nginx Container" session before
-docker/start-container.sh nginx
+docker/create-container.sh nginx
 
 // Please read "Mongo Container" session before
-docker/start-container.sh mongo
+docker/create-container.sh mongo
 
 // Please read "Redis Container" session before
-docker/start-container.sh redis
+docker/create-container.sh redis
+
+// Please read "Ayro Container" session before
+docker/create-container.sh ayro/ayro
+
+// Please read "Ayro Webcm Container" session before
+docker/create-container.sh ayro/ayro-webcm
+
+// Please read "Ayro Website Container" session before
+docker/create-container.sh ayro/ayro-website
 ````
 
 ## Nginx Container ##
@@ -55,7 +64,7 @@ certs/install-certs-tasks.sh
 ### Shell ###
 
 ````
-docker run --rm -it --net=ayro-network mongo mongo --host mongo
+docker run --rm -it --net=ayro-network mongo:3.4.10 mongo --host mongo
 ````
 
 ### Security ###
@@ -88,5 +97,17 @@ db.createUser({
 ### Client ###
 
 ````
-docker run --rm -it --net=ayro-network redis redis-cli -h redis
+docker run --rm -it --net=ayro-network redis:4.0.5 redis-cli -h redis
 ````
+
+## Ayro Container ##
+
+Before run the container you must create the file ayro.config on $AYRO_HOME/configs.
+
+## Ayro Webcm Container ##
+
+Before run the container you must create the file ayro-webcm.config on $AYRO_HOME/configs.
+
+## Ayro Website Container ##
+
+Before run the container you must create the file ayro-website.config on $AYRO_HOME/configs.
