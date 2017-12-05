@@ -2,11 +2,6 @@
 
 set -e
 
-if [ "$(whoami)" != "ayro" ]; then
-  echo "This script must be executed with the user ayro"
-  exit 1
-fi
-
 echo "Installing Docker..."
 
 sudo apt-get update

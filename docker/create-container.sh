@@ -2,13 +2,13 @@
 
 set -e
 
-if [ "$(whoami)" != "ayro" ]; then
-  echo "This script must be executed with the user ayro"
+if [ -z "$AYRO_HOME" ]; then
+  echo "Enrivonment variable with name AYRO_HOME is required"
   exit 1
 fi
 
-if [ -z "$AYRO_HOME" ]; then
-  echo "Enrivonment variable with name AYRO_HOME is required"
+if [ -z "$DOCKER_HOST" ]; then
+  echo "Enrivonment variable with name DOCKER_HOST is required"
   exit 1
 fi
 
@@ -18,7 +18,7 @@ if [ ! -d "$AYRO_HOME/apps/ayro-configs" ]; then
 fi
 
 if [ $# != 1 ]; then
-  echo "Usage: $0 <container_name>"
+  echo "Usage: $0 <image_name>"
   echo "Examples: $0 ayro/ayro"
   echo "          $0 redis"
   exit 1
@@ -34,4 +34,3 @@ docker-compose up -d
 rm docker-compose.yml
 
 echo "Container $1 was created with success!"
-
