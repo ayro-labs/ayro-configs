@@ -8,7 +8,6 @@ x-common:
       - "ayro-nginx:172.28.5.10"
       - "ayro-mongo:172.28.5.11"
       - "ayro-redis:172.28.5.12"
-      - "ayro-prerender:${DOCKER_HOST}"
 networks:
   default:
     external:
