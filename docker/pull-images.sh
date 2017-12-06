@@ -12,20 +12,19 @@ if [ ! -d "$AYRO_HOME/apps/ayro-configs" ]; then
   exit 1
 fi
 
-if [ $# != 1 ]; then
-  echo "Usage: $0 <image_name>"
-  echo "Examples: $0 ayro/ayro"
-  echo "          $0 redis"
-  exit 1
-fi
-
-echo "Creating container $1..."
+echo "Pulling images..."
 
 eval $(aws ecr get-login --no-include-email --region us-west-1)
+
 cd $AYRO_HOME/apps/ayro-configs/docker
-cat docker-compose-override.yml $1/docker-compose.yml > docker-compose.yml
+
+cat docker-compose-override.yml ayro/ayro/docker-compose.yml > docker-compose.yml
 docker-compose pull
-docker-compose up -d
+cat docker-compose-override.yml ayro/ayro-webcm/docker-compose.yml > docker-compose.yml
+docker-compose pull
+cat docker-compose-override.yml ayro/ayro-website/docker-compose.yml > docker-compose.yml
+docker-compose pull
+
 rm docker-compose.yml
 
-echo "Container $1 was created with success!"
+echo "Images pulled with success!"
