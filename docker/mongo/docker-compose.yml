@@ -5,6 +5,7 @@ services:
     image: "mongo:3.4.10"
     container_name: "mongo"
     hostname: "ayro-mongo"
+    restart: "always"
     volumes:
       - "${AYRO_HOME}/apps/ayro-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
       - "${AYRO_HOME}/data/mongo:/data/db"

@@ -5,6 +5,7 @@ services:
     image: "redis:4.0.5"
     container_name: "redis"
     hostname: "ayro-redis"
+    restart: "always"
     volumes:
       - "${AYRO_HOME}/apps/ayro-configs/docker/redis/default.conf:/usr/local/etc/redis/redis.conf"
       - "${AYRO_HOME}/data/redis:/data"
