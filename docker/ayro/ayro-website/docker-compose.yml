@@ -2,7 +2,7 @@ version: "3.4"
 services:
   ayro-website:
     << : *common
-    image: "${AYRO_REGISTRY}/ayro/ayro-website:latest"
+    image: "ayro-website:latest"
     container_name: "ayro-website"
     hostname: "ayro-website"
     restart: "always"
