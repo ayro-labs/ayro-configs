@@ -2,7 +2,7 @@ version: "3.4"
 services:
   ayro-webcm:
     << : *common
-    image: "554511234717.dkr.ecr.us-west-1.amazonaws.com/ayro/ayro-webcm:latest"
+    image: "${AYRO_REGISTRY}/ayro/ayro-webcm:latest"
     container_name: "ayro-webcm"
     hostname: "ayro-webcm"
     restart: "always"

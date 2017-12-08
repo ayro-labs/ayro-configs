@@ -7,6 +7,11 @@ if [ -z "$AYRO_HOME" ]; then
   exit 1
 fi
 
+if [ -z "$AYRO_REGISTRY" ]; then
+  echo "Enrivonment variable with name AYRO_REGISTRY is required"
+  exit 1
+fi
+
 if [ ! -d "$AYRO_HOME/apps/ayro-configs" ]; then
   echo "The project ayro-configs must be located in $AYRO_HOME/apps"
   exit 1
