@@ -13,6 +13,13 @@ docker/install-docker.sh
 docker/install-docker-compose.sh
 ````
 
+### Pulling Ayro Images ###
+
+Ayro images are stored on Amazon ECR. To pull the images just run the following command:
+````
+docker/pull-images.sh
+````
+
 ### Running Containers ###
 
 First you need to create the Ayro network on Docker:
@@ -102,12 +109,12 @@ docker run --rm -it --net=ayro-network redis:4.0.5 redis-cli -h redis
 
 ## Ayro Container ##
 
-Before run the container you must create the file ayro.config on $AYRO_HOME/configs.
+The project configuration file is exported as a Docker volume on $AYRO_HOME/configs/ayro.config.
 
 ## Ayro Webcm Container ##
 
-Before run the container you must create the file ayro-webcm.config on $AYRO_HOME/configs.
+The project configuration file is exported as a Docker volume on $AYRO_HOME/configs/ayro-webcm.config.
 
 ## Ayro Website Container ##
 
-Before run the container you must create the file ayro-website.config on $AYRO_HOME/configs.
+The project configuration file is exported as a Docker volume on $AYRO_HOME/configs/ayro-website.config.
