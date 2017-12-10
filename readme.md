@@ -110,11 +110,14 @@ docker run --rm -it --net=ayro-network redis:4.0.5 redis-cli -h redis
 ## Ayro Container ##
 
 The project configuration file is exported as a Docker volume on $AYRO_HOME/configs/ayro.config.
+This file must be created before running the container.
 
 ## Ayro Webcm Container ##
 
 The project configuration file is exported as a Docker volume on $AYRO_HOME/configs/ayro-webcm.config.
+This file must be created before running the container.
 
 ## Ayro Website Container ##
 
 The project configuration file is exported as a Docker volume on $AYRO_HOME/configs/ayro-website.config.
+This file must be created before running the container.

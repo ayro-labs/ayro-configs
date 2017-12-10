@@ -30,4 +30,7 @@ docker tag $AYRO_REGISTRY/ayro/ayro-webcm:latest ayro-webcm:latest
 docker pull $AYRO_REGISTRY/ayro/ayro-website:latest
 docker tag $AYRO_REGISTRY/ayro/ayro-website:latest ayro-website:latest
 
+docker pull $AYRO_REGISTRY/ayro/ayro-prerender:latest
+docker tag $AYRO_REGISTRY/ayro/ayro-prerender:latest ayro-prerender:latest
+
 echo "Images pulled with success!"

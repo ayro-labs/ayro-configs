@@ -29,7 +29,7 @@ echo "Creating container $1..."
 eval $(aws ecr get-login --no-include-email --region us-west-1)
 cd $AYRO_HOME/apps/ayro-configs/docker
 cat docker-compose-override.yml $1/docker-compose.yml > docker-compose.yml
-docker-compose up -d
+docker-compose up -d --remove-orphans
 rm docker-compose.yml
 
 echo "Container $1 was created with success!"
