@@ -5,7 +5,6 @@ services:
     image: "ayro-website:latest"
     container_name: "ayro-website"
     hostname: "ayro-website"
-    restart: "always"
     volumes:
       - "${AYRO_HOME}/configs/ayro-website.properties:/usr/src/ayro-website/server/config.properties"
     networks:

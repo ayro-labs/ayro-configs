@@ -5,7 +5,6 @@ services:
     image: "ayro-prerender:latest"
     container_name: "ayro-prerender"
     hostname: "ayro-prerender"
-    restart: "always"
     volumes:
       - "${AYRO_HOME}/configs/ayro-prerender.properties:/usr/src/ayro-prerender/config.properties"
     networks:

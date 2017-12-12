@@ -5,7 +5,6 @@ services:
     image: "ayro-webcm:latest"
     container_name: "ayro-webcm"
     hostname: "ayro-webcm"
-    restart: "always"
     volumes:
       - "${AYRO_HOME}/configs/ayro-webcm.properties:/usr/src/ayro-webcm/config.properties"
     networks:

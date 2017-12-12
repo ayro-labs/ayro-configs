@@ -5,7 +5,6 @@ services:
     image: "ayro:latest"
     container_name: "ayro"
     hostname: "ayro"
-    restart: "always"
     volumes:
       - "${AYRO_HOME}/configs/ayro.properties:/usr/src/ayro/config.properties"
       - "${AYRO_HOME}/public:/usr/src/ayro/public"
