@@ -2,8 +2,8 @@
 
 set -e
 
-echo "Removing unused images..."
+echo "Removing untagged images..."
 
 docker rmi -f $(docker images -f "dangling=true" -q)
 
-echo "Unused images removed with success!"
+echo "Untagged images removed with success!"
