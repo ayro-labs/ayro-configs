@@ -8,7 +8,8 @@ services:
     restart: "always"
     volumes:
       - "${AYRO_HOME}/apps/ayro-configs/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"
-      - "${AYRO_HOME}/apps/ayro-configs/certs:/etc/nginx/ssl"
+      - "${AYRO_HOME}/data/letsencrypt:/data/letsencrypt"
+      - "/etc/letsencrypt:/etc/letsencrypt"
     ports:
       - "80:80"
       - "443:443"
