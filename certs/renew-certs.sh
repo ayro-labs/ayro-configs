@@ -7,16 +7,22 @@ if [ -z "$AYRO_HOME" ]; then
   exit 1
 fi
 
-echo "Renewing ayro.io certificate..."
+echo "" >> $AYRO_HOME/logs/renew-certs.log
+echo "###########################################################" >> $AYRO_HOME/logs/renew-certs.log
+echo "## Renewing certificates at $(date) ##" >> $AYRO_HOME/logs/renew-certs.log
+echo "###########################################################" >> $AYRO_HOME/logs/renew-certs.log
+echo "" >> $AYRO_HOME/logs/renew-certs.log
+
+echo "1º Renewing ayro.io certificate..."
 sudo letsencrypt certonly -n --webroot -w $AYRO_HOME/data/letsencrypt -d ayro.io >> $AYRO_HOME/logs/renew-certs.log
 
-echo "Renewing api.ayro.io certificate..."
+echo "2º Renewing api.ayro.io certificate..."
 sudo letsencrypt certonly -n --webroot -w $AYRO_HOME/data/letsencrypt -d api.ayro.io >> $AYRO_HOME/logs/renew-certs.log
 
-echo "Renewing www.ayro.io certificate..."
+echo "3º Renewing www.ayro.io certificate..."
 sudo letsencrypt certonly -n --webroot -w $AYRO_HOME/data/letsencrypt -d www.ayro.io >> $AYRO_HOME/logs/renew-certs.log
 
-echo "Renewing webcm.ayro.io certificate..."
+echo "4º Renewing webcm.ayro.io certificate..."
 sudo letsencrypt certonly -n --webroot -w $AYRO_HOME/data/letsencrypt -d webcm.ayro.io >> $AYRO_HOME/logs/renew-certs.log
 
-echo "Certificates renewed with success!"
+echo "Certificates renewied with success!"

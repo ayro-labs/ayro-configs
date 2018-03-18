@@ -13,9 +13,9 @@ echo "Installing certificate cron tasks..."
 CRON_RENEW_CMD="$AYRO_HOME/apps/ayro-configs/certs/renew-certs.sh"
 CRON_RENEW_JOB="0 0 * * * $CRON_RENEW_CMD"
 
-(crontab -l | grep -v -F "$CRON_RENEW_CMD") | crontab - || true
-(crontab -l | grep -v -F "$CRON_RENEW_CMD" ; echo "$CRON_RENEW_JOB") | crontab - || true
+(sudo crontab -l | grep -v -F "$CRON_RENEW_CMD") | sudo crontab - || true
+(sudo crontab -l | grep -v -F "$CRON_RENEW_CMD" ; echo "$CRON_RENEW_JOB") | sudo crontab - || true
 
 echo "Certificate cron tasks was installed with success!"
 echo "Current tasks:"
-crontab -l
+sudo crontab -l
