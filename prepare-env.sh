@@ -25,6 +25,7 @@ echo "Creating base directories..."
 mkdir -p $AYRO_HOME/public
 mkdir -p $AYRO_HOME/configs
 mkdir -p $AYRO_HOME/data
+mkdir -p $AYRO_HOME/data/letsencrypt
 mkdir -p $AYRO_HOME/logs
 printf "\n\n"
 sleep 5
