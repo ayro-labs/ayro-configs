@@ -68,10 +68,10 @@ certs/install-certs-tasks.sh
 
 ## Mongo Container ##
 
-### Shell ###
+### Opening the Shell ###
 
 ````
-docker run --rm -it --net=ayro-network mongo:3.4.10 mongo --host mongo
+docker/mongo/connect.sh
 ````
 
 ### Security ###
@@ -104,7 +104,7 @@ db.createUser({
 ### Client ###
 
 ````
-docker run --rm -it --net=ayro-network redis:4.0.5 redis-cli -h redis
+docker/redis/connect.sh
 ````
 
 ## Ayro Container ##
