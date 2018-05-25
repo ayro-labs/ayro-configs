@@ -6,7 +6,7 @@ services:
     container_name: "ayro-webcm"
     hostname: "ayro-webcm"
     volumes:
-      - "${AYRO_HOME}/configs/ayro-webcm.properties:/usr/src/ayro-webcm/config.properties"
+      - "${AYRO_HOME}/configs/ayro-webcm.yml:/usr/src/ayro-webcm/config.yml"
     networks:
       default:
         ipv4_address: "172.28.5.2"

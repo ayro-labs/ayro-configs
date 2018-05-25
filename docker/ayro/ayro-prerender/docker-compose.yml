@@ -6,7 +6,7 @@ services:
     container_name: "ayro-prerender"
     hostname: "ayro-prerender"
     volumes:
-      - "${AYRO_HOME}/configs/ayro-prerender.properties:/usr/src/ayro-prerender/config.properties"
+      - "${AYRO_HOME}/configs/ayro-prerender.yml:/usr/src/ayro-prerender/config.yml"
     networks:
       default:
         ipv4_address: "172.28.5.4"

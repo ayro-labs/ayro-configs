@@ -6,7 +6,7 @@ services:
     container_name: "ayro"
     hostname: "ayro"
     volumes:
-      - "${AYRO_HOME}/configs/ayro.properties:/usr/src/ayro/config.properties"
+      - "${AYRO_HOME}/configs/ayro.yml:/usr/src/ayro/config.yml"
       - "${AYRO_HOME}/public:/usr/src/ayro/public"
     networks:
       default:
