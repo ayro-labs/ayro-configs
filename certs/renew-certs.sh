@@ -2,6 +2,8 @@
 
 set -e
 
+source $HOME/.profile
+
 if [ -z "$AYRO_HOME" ]; then
   echo "Enrivonment variable with name AYRO_HOME is required"
   exit 1
